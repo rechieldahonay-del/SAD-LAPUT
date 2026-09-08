@@ -290,7 +290,7 @@ It provides a simple way for users to submit, view, update, and delete ICT servi
 
 ## Author
 
-**Resty Montero**
+**Rechiel Laput**
 
 ## Project Type
 
