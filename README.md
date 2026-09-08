@@ -300,6 +300,67 @@ It provides a simple way for users to submit, view, update, and delete ICT servi
 
 **Visual Studio Code + Supabase + Live Server**
 
-**ERD**
-<img width="1200" height="760" alt="image" src="https://github.com/user-attachments/assets/5353da18-2e09-40e5-a038-9b454ba425a5" />
+# SAD Analysis
 
+## 1. Problem Statement
+
+ICT service requests are often received through informal messages or verbal reports, making them difficult to track, search, update, and resolve. The ICT Service Request System provides one authenticated location where users can submit requests, view records, update details, delete requests, and monitor request status. This improves organization, visibility, and accountability in handling ICT support concerns.
+
+## 2. Actor
+
+**Primary actor:** System User / ICT Personnel
+
+The authenticated user interacts with the system to create and manage ICT service requests.
+
+![Primary Actor](actor-diagram.svg)
+
+## 3. Use Case Diagram
+
+![Use Case Diagram](use-case-diagram.svg)
+
+The primary actor can:
+
+- Login
+- View Dashboard
+- Create Request
+- View Requests
+- Search Request
+- Filter Requests
+- Update Request
+- Delete Request
+- Logout
+
+## 4. Simple ERD
+
+![Entity Relationship Diagram](erd-diagram.svg)
+
+### Relationship
+
+One authenticated **USER** can create many **SERVICE_REQUEST** records.
+
+```text
+USER (1) -------------- creates -------------- (M) SERVICE_REQUEST
+```
+
+### USER
+
+| Field | Description |
+| --- | --- |
+| `user_id` | UUID primary key from Supabase Auth |
+| `email` | Authenticated user's email |
+
+### SERVICE_REQUEST
+
+| Field | Description |
+| --- | --- |
+| `id` | BIGINT primary key |
+| `requester_name` | Name of the requester |
+| `department` | Requester's department |
+| `category` | ICT request category |
+| `description` | Details of the concern |
+| `priority` | Low, Medium, High, or Urgent |
+| `status` | Pending, In Progress, Completed, or Cancelled |
+| `created_at` | Date and time the request was created |
+| `user_id` | UUID foreign key referencing the authenticated user |
+
+The ERD corresponds to the Supabase `service_requests` table used by the application.
