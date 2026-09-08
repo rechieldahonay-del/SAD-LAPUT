@@ -312,11 +312,13 @@ ICT service requests are often received through informal messages or verbal repo
 
 The authenticated user interacts with the system to create and manage ICT service requests.
 
-![Primary Actor](actor-diagram.svg)
+![Primary Actor](<img width="497" height="352" alt="image" src="https://github.com/user-attachments/assets/81817aa4-8b85-485d-b7c2-649ab4429906" />
+)
 
 ## 3. Use Case Diagram
 
-![Use Case Diagram](use-case-diagram.svg)
+![Use Case Diagram](<img width="1200" height="760" alt="image" src="https://github.com/user-attachments/assets/ccf479f0-c74d-41d5-9b26-6b71f609764b" />
+)
 
 The primary actor can:
 
