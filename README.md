@@ -299,3 +299,7 @@ It provides a simple way for users to submit, view, update, and delete ICT servi
 ## Development Tools
 
 **Visual Studio Code + Supabase + Live Server**
+
+**ERD**
+<img width="1200" height="760" alt="image" src="https://github.com/user-attachments/assets/5353da18-2e09-40e5-a038-9b454ba425a5" />
+
